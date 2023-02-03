@@ -1,0 +1,162 @@
+:root {
+  --primary-one: hsl(0, 78%, 62%);
+  --primary-two: hsl(180, 62%, 55%);
+  --primary-three: hsl(34, 97%, 64%);
+  --primary-four: hsl(212, 86%, 64%);
+  --neutral-one: hsl(234, 12%, 34%);
+  --neutral-two: hsl(229, 6%, 66%);
+  --neutral-three: hsl(0, 0%, 98%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  background-color: var(--neutral-three);
+}
+
+main {
+  margin: 5rem auto 0 auto;
+  max-width: 140rem;
+}
+
+/************/
+/* UTILITY  */
+/************/
+
+.mg-btm-b {
+  margin-bottom: 3.6rem;
+}
+
+header {
+  text-align: center;
+}
+
+.main-heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+.text-thin {
+  font-weight: 200;
+  font-size: 3.6rem;
+}
+
+.text-bold {
+  font-size: 3.6rem;
+}
+
+.header-paragraph {
+  margin: 0 auto;
+  color: var(--neutral-two);
+  width: 50rem;
+  line-height: 1.5;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4.8rem;
+}
+
+.offer-box {
+  width: 40rem;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  background-color: #fff;
+}
+
+.offer-box-cyan {
+  border-top: 3px solid hsl(180, 62%, 55%);
+}
+.offer-box-red {
+  border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+.offer-box-yellow {
+  border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+.offer-box-blue {
+  border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+.offer-box-heading {
+  color: var(--neutral-one);
+  margin-bottom: 1.2rem;
+}
+
+.offer-box-description {
+  color: var(--neutral-two);
+  line-height: 1.8;
+}
+
+.offer-box-img {
+  margin-top: 4rem;
+  text-align: right;
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--primary-four);
+}
+
+/* BELOW 1340 PX */
+@media (max-width: 83.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* BELOW 1100 PX */
+@media (max-width: 68.75em) {
+  .mg-btm-b {
+    margin-bottom: 3.2rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    padding: 4.8rem;
+  }
+
+  .offer-box-img {
+    margin-top: 2.4rem;
+  }
+}
+
+/* BELOW 432 PX */
+@media (max-width: 27em) {
+  .header-paragraph {
+    width: 90%;
+  }
+
+  .container {
+    padding: 3.2rem;
+  }
+
+  .offer-box {
+    width: 100%;
+  }
+}
